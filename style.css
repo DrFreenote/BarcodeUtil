@@ -1,0 +1,43 @@
+body {
+    margin: 0px;
+    height: 100vh;
+}
+
+textarea {
+    height: 100%;
+}
+
+canvas {
+    visibility: hidden;
+    height: 0%;
+}
+
+.sidebar {
+    display: inline-block;
+    position: static;
+    vertical-align: top;
+    border-width: 1px;
+    margin: 3px;
+    padding: 0px;
+    height: calc(100vh - 38px);
+}
+
+.content {
+    display: inline-block;
+    position: static;
+    vertical-align: top;
+    border-width: 1px;
+    margin: 3px;
+    padding: 0px;
+    height: calc(100vh - 7px);
+    width: 500px;
+    background-color: rgb(222, 222, 222);
+    text-align: center;
+}
+
+#printable {
+    width: 100%;
+    height: calc(100% - 7px);
+}
+
+

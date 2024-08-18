@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Batch Barcode Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="barcode.js"></script>
+  </head>
+  <body>
+    <div class="sidebar">
+      <textarea id="textarea" rows=50 cols="30" name="text" onchange="textAreaUpdate()" placeholder="Input Text -> Output Barcodes
+
+New Line = New Barcode"></textarea>
+<br />
+<button type="button" onclick="printHandler()">Print!</button>
+    </div>
+    <div id="content" class="content">
+      <iframe id="printable"></iframe>
+    </div>
+  </body>
+</html>
