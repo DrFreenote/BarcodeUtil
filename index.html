@@ -3,18 +3,27 @@
   <head>
     <title>Batch Barcode Generator</title>
     <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="print.css"> -->
+    <link rel="stylesheet" href="print.css" media="print">
     <script src="barcode.js"></script>
   </head>
   <body>
-    <div class="sidebar">
-      <textarea id="textarea" rows=50 cols="30" name="text" onchange="textAreaUpdate()" placeholder="Input Text -> Output Barcodes
-
-New Line = New Barcode"></textarea>
-<br />
-<button type="button" onclick="printHandler()">Print!</button>
-    </div>
-    <div id="content" class="content">
-      <iframe id="printable"></iframe>
-    </div>
+    <span class="sidebar">
+      <span class="row">
+        <input id="regex" for="regex" placeholder="/[a-z0-9]/gim" class="disabled"></input>
+        <button type="button" class="disabled">Refresh</button>
+      </span>
+      <span class="rowinput">
+        <textarea id="rawinput" onchange="updateTextArea()" placeholder="Input Text -> Output Barcodes"></textarea>
+      </span>
+      <span class="row">
+        <button type="button" onclick="printHandler()" class="disabled">Print</button>
+      </span>
+    </span>
+    <span class="content" id="barcodes">
+      <span class="barcodes"></span>
+    </span>
+    <span class="sidebar">
+    </span>
   </body>
 </html>
