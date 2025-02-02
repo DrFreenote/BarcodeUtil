@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Batch Barcode Generator</title>
+    <link rel="stylesheet" href="regex.css">
+    <!-- <link rel="stylesheet" href="print.css"> -->
+    <link rel="stylesheet" href="print.css" media="print">
+    <script src="regex_replace.js" defer></script>
+  </head>
+  <body>
+    <span class="sidebar">
+      <span class="row">
+        <input id="regex" for="regex" placeholder=".*?(.{5})" value="" class=""></input>
+        <input id="rwith" for="repla" placeholder="$1" value="" class=""></input>
+        <button type="button" class="disabled">Refresh</button>
+      </span>
+      <span class="rowinput">
+        <textarea id="input" onchange="regex_replace.onChangeTextInput()" placeholder="Input Text"></textarea>
+      </span>
+      <span class="row disabled">
+        <button type="button" onclick="printHandler()" class="disabled">Print</button>
+      </span>
+    </span>
+    <!-- <span class="content" id="barcodes">
+      <span class="barcodes"></span>
+    </span> -->
+    <span class="sidebar">
+      <span class="row output">
+        <textarea id="output" placeholder="Output Text"></textarea>
+      </span>
+    </span>
+  </body>
+</html>
